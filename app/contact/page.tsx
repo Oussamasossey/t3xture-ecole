@@ -71,7 +71,7 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
       </section>
 
       <section id="trial" aria-labelledby="trial-heading" className="container-x scroll-mt-28 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_1fr]">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-indigo-600">Free trial lesson</p>
             <h2 id="trial-heading" className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">

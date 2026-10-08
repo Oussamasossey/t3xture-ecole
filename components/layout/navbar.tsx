@@ -92,7 +92,7 @@ export function Navbar() {
             </DialogTrigger>
             <DialogContent className="top-6 max-w-md -translate-y-0 p-0 sm:rounded-3xl">
               <DialogTitle className="sr-only">Navigation menu</DialogTitle>
-              <div className="flex items-center justify-between border-b border-border px-6 py-4">
+              <div className="flex items-center justify-between border-b border-border py-4 pl-6 pr-14">
                 <span className="text-lg font-extrabold">{site.name}</span>
                 <span className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
                   {site.tagline}

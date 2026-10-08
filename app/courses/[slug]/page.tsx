@@ -313,7 +313,7 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
       </section>
 
       <section aria-labelledby="schedule-heading" className="container-x pb-16">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <h2 id="schedule-heading" className="text-2xl font-extrabold sm:text-3xl">
               Weekly schedule
