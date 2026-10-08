@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 228 64% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 64% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 64% 6%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 262 83% 66%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 47% 96%;
+    --muted-foreground: 222 20% 45%;
+    --accent: 213 94% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 92%;
+    --input: 222 30% 90%;
+    --ring: 243 75% 59%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .bg-brand-gradient {
+    @apply bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500;
+  }
+
+  .bg-soft-gradient {
+    @apply bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-border/70 bg-card shadow-soft;
+  }
+
+  .grid-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.16) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+
+  .blob {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-float,
+  .animate-float-slow,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
